@@ -1,0 +1,931 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+/* line 5, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*font-family: 'Quicksand', sans-serif;*/
+/*font-family: 'Josefin Sans', sans-serif;*/
+/*font-family: 'Righteous', cursive;*/
+/*font-family: 'Josefin Sans', sans-serif;*/
+/*font-family: 'Luckiest Guy', cursive;*/
+/* line 16, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* line 22, ../sass/style.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #010000;
+}
+
+/* line 30, ../sass/style.scss */
+.header {
+  background: url(../img/header_bg.jpg) no-repeat center/cover;
+  height: 100vh;
+  position: relative;
+}
+/* line 36, ../sass/style.scss */
+.header:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20vh;
+  bottom: 0;
+  background: linear-gradient(to top, #010000, transparent);
+}
+/* line 47, ../sass/style.scss */
+.header > .wr {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: 100%;
+}
+/* line 55, ../sass/style.scss */
+.header > .wr > .nav {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+/* line 61, ../sass/style.scss */
+.header > .wr > .nav > .logo_foto {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../img/logo.jpg) no-repeat top/cover;
+  transition: all 0.4s ease;
+  box-shadow: 2px 2px 2px black;
+  filter: opacity(0.6);
+}
+@media (max-width: 768px) {
+  /* line 61, ../sass/style.scss */
+  .header > .wr > .nav > .logo_foto {
+    display: none;
+  }
+}
+/* line 75, ../sass/style.scss */
+.header > .wr > .nav > .logo_foto:hover {
+  transform: scale(1.2);
+  box-shadow: 3px 12px 4px black;
+  border-radius: 30%;
+  filter: opacity(1);
+}
+@media (max-width: 768px) {
+  /* line 84, ../sass/style.scss */
+  .header > .wr > .nav > .links {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+/* line 90, ../sass/style.scss */
+.header > .wr > .nav > .links a {
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  font-weight: 700;
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 25px;
+  text-shadow: 3px 9px 2px black;
+  transition: all 0.4s ease;
+}
+@media (max-width: 768px) {
+  /* line 90, ../sass/style.scss */
+  .header > .wr > .nav > .links a {
+    font-size: 15px;
+  }
+}
+/* line 106, ../sass/style.scss */
+.header > .wr > .nav > .links a:hover {
+  text-shadow: 1px 2px 1px black;
+  transform: scale(0.8);
+  color: #84dc76;
+  opacity: 0.9;
+}
+/* line 117, ../sass/style.scss */
+.header > .wr > .content {
+  position: absolute;
+  color: white;
+  max-width: 546px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(28, 5, 11, 0.7);
+  overflow: hidden;
+  padding: 65px;
+  border-radius: 80% 100% 80% 100%;
+  transition: all 2s ease;
+  box-shadow: 3px 12px 4px black;
+  text-shadow: 1px 3px 1px black;
+  letter-spacing: 7px;
+}
+@media (max-width: 768px) {
+  /* line 117, ../sass/style.scss */
+  .header > .wr > .content {
+    letter-spacing: 3px;
+    padding: 30px;
+  }
+}
+/* line 144, ../sass/style.scss */
+.header > .wr > .content:hover {
+  border-radius: 100% 80% 100% 80%;
+  background: linear-gradient(to right, #21ce2f, #450c23);
+  color: #b51351;
+  box-shadow: 30px 30px 45px black;
+  transform: translateX(-50%);
+  text-shadow: 3px 9px 2px black;
+  filter: opacity(0.9);
+}
+/* line 155, ../sass/style.scss */
+.header > .wr > .content > .name {
+  font-size: 70px;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  /* line 155, ../sass/style.scss */
+  .header > .wr > .content > .name {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+}
+/* line 168, ../sass/style.scss */
+.header > .wr > .content > .spec {
+  margin-top: 5px;
+  font-size: 35px;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  /* line 168, ../sass/style.scss */
+  .header > .wr > .content > .spec {
+    font-size: 20px;
+  }
+}
+
+/* line 185, ../sass/style.scss */
+.about {
+  position: relative;
+  background: linear-gradient(to bottom, #010000, #401227);
+  padding: 100px 0 300px;
+}
+@media (max-width: 940px) {
+  /* line 185, ../sass/style.scss */
+  .about {
+    padding: 100px 0;
+  }
+}
+/* line 196, ../sass/style.scss */
+.about:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 50vh;
+  bottom: 0;
+  background: linear-gradient(to top, #010000, transparent);
+  z-index: 0;
+}
+/* line 208, ../sass/style.scss */
+.about > .wr {
+  max-width: 65%;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 214, ../sass/style.scss */
+.about > .wr > .info {
+  z-index: 1;
+}
+@media (max-width: 940px) {
+  /* line 214, ../sass/style.scss */
+  .about > .wr > .info {
+    z-index: auto;
+  }
+}
+/* line 224, ../sass/style.scss */
+.about > .wr > .info > .about_me {
+  position: absolute;
+  width: 400px;
+  top: 300px;
+  left: 360px;
+  transition: all 1s ease;
+  z-index: 2;
+}
+@media (max-width: 940px) {
+  /* line 224, ../sass/style.scss */
+  .about > .wr > .info > .about_me {
+    position: relative;
+    z-index: auto;
+    top: auto;
+    left: auto;
+    text-align: center;
+    width: auto;
+  }
+}
+/* line 243, ../sass/style.scss */
+.about > .wr > .info > .about_me > :hover {
+  text-shadow: 2px 3px 1px green;
+  transform: scale(1.4);
+}
+/* line 249, ../sass/style.scss */
+.about > .wr > .info > .about_me > h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  transition: all 1s ease;
+}
+@media (max-width: 940px) {
+  /* line 249, ../sass/style.scss */
+  .about > .wr > .info > .about_me > h1 {
+    font-size: 20px;
+  }
+}
+/* line 263, ../sass/style.scss */
+.about > .wr > .info > .about_me > p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  transition: all 1s ease;
+}
+@media (max-width: 940px) {
+  /* line 263, ../sass/style.scss */
+  .about > .wr > .info > .about_me > p {
+    font-size: 15px;
+  }
+}
+/* line 279, ../sass/style.scss */
+.about > .wr > .info > .foto {
+  max-width: 600px;
+}
+@media (max-width: 940px) {
+  /* line 279, ../sass/style.scss */
+  .about > .wr > .info > .foto {
+    width: auto;
+    margin-top: 30px;
+  }
+}
+/* line 288, ../sass/style.scss */
+.about > .wr > .info > .foto > img {
+  display: block;
+  border-radius: 15%;
+  transition: all 0.5s ease;
+  box-shadow: 0px 60px 70px black;
+}
+@media (max-width: 940px) {
+  /* line 288, ../sass/style.scss */
+  .about > .wr > .info > .foto > img {
+    width: 100%;
+  }
+}
+/* line 300, ../sass/style.scss */
+.about > .wr > .info > .foto > img:hover {
+  transform: scale(0.8);
+  box-shadow: 0px 10px 36px black;
+}
+
+/* line 316, ../sass/style.scss */
+.abilities_projects {
+  padding: 100px 0;
+  background: url(../img/abilities_bg.jpg) no-repeat center/cover;
+}
+@media (max-width: 768px) {
+  /* line 316, ../sass/style.scss */
+  .abilities_projects {
+    padding: 30px 0;
+  }
+}
+/* line 325, ../sass/style.scss */
+.abilities_projects:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(to top, #010000, transparent);
+  z-index: 0;
+}
+/* line 339, ../sass/style.scss */
+.abilities_projects > .abilities {
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(28, 5, 11, 0.7);
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  /* line 339, ../sass/style.scss */
+  .abilities_projects > .abilities {
+    background: none;
+  }
+}
+/* line 351, ../sass/style.scss */
+.abilities_projects > .abilities > .colum {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  /* line 351, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum {
+    display: block;
+  }
+}
+/* line 360, ../sass/style.scss */
+.abilities_projects > .abilities > .colum:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+/* line 365, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .text {
+  color: white;
+  flex-basis: 40%;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  text-shadow: 5px 5px 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  /* line 365, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum > .text {
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+}
+/* line 380, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col {
+  flex-basis: 60%;
+  background: linear-gradient(to left top, #184cb9, #c31783);
+  height: 72px;
+  margin: 30px 15px;
+  border-radius: 156px 106%;
+  box-shadow: 12px 10px 9px black;
+  box-sizing: border-box;
+  border: 5px solid #c31783;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  /* line 380, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum > .col {
+    height: 40px;
+    margin: 5px 0;
+  }
+}
+/* line 398, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col > .progress {
+  width: 75%;
+  background: linear-gradient(to right, #fefefe, #c54224);
+  height: 100%;
+  vertical-align: middle;
+  border-radius: inherit;
+  border: 4px solid #fefefe;
+  box-sizing: border-box;
+  box-shadow: 10px 0 3px black;
+}
+/* line 412, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col2 {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  /* line 412, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum > .col2 {
+    justify-content: flex-start;
+  }
+}
+/* line 420, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col2 > .p2 {
+  width: 80%;
+  background: linear-gradient(to left, #fefefe, #c54224);
+  border-radius: inherit;
+  box-shadow: -10px 0 3px black;
+}
+@media (max-width: 768px) {
+  /* line 420, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum > .col2 > .p2 {
+    background: linear-gradient(to right, #fefefe, #c54224);
+    box-shadow: 10px 0 3px black;
+  }
+}
+/* line 434, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col3 > .p3 {
+  width: 58%;
+}
+/* line 438, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col4 {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  /* line 438, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum > .col4 {
+    justify-content: flex-start;
+  }
+}
+/* line 446, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col4 > .p4 {
+  width: 55%;
+  background: linear-gradient(to left, #fefefe, #c54224);
+  border-radius: inherit;
+  box-shadow: -10px 0 3px black;
+}
+@media (max-width: 768px) {
+  /* line 446, ../sass/style.scss */
+  .abilities_projects > .abilities > .colum > .col4 > .p4 {
+    background: linear-gradient(to right, #fefefe, #c54224);
+    box-shadow: 10px 0 3px black;
+  }
+}
+/* line 459, ../sass/style.scss */
+.abilities_projects > .abilities > .colum > .col5 > .p5 {
+  width: 90%;
+}
+/* line 466, ../sass/style.scss */
+.abilities_projects > .projects {
+  margin-top: 200px;
+}
+@media (max-width: 768px) {
+  /* line 466, ../sass/style.scss */
+  .abilities_projects > .projects {
+    margin-top: 100px;
+  }
+}
+/* line 472, ../sass/style.scss */
+.abilities_projects > .projects > .wr {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 476, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 80px;
+  text-shadow: 0px 0px 33px white;
+  color: #191085;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: all 1s ease;
+}
+@media (max-width: 768px) {
+  /* line 476, ../sass/style.scss */
+  .abilities_projects > .projects > .wr > .title {
+    font-size: 40px;
+  }
+}
+/* line 491, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .title:hover {
+  transform: scale(0.95);
+  color: #ff265d;
+  text-shadow: 0px 0px 10px white;
+}
+/* line 500, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  /* line 500, ../sass/style.scss */
+  .abilities_projects > .projects > .wr > .projects-cont {
+    display: block;
+    margin-top: 30px;
+  }
+}
+/* line 511, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project {
+  width: 380px;
+  height: 380px;
+  border: 5px solid #191085;
+  overflow: hidden;
+  border-radius: 60px;
+  filter: opacity(0.7);
+  transition: all 1s ease;
+  margin: 0 10px;
+  box-shadow: 0px 10px 5px black;
+}
+@media (max-width: 768px) {
+  /* line 511, ../sass/style.scss */
+  .abilities_projects > .projects > .wr > .projects-cont > .project {
+    width: 60%;
+    height: 300px;
+    margin: 20px auto 0;
+  }
+}
+/* line 530, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project:hover {
+  filter: opacity(1);
+  border: 10px solid red;
+  border-radius: 100px;
+  box-shadow: 0 0 50px white;
+}
+/* line 537, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project:hover > .project-wr {
+  transform: translateY(-50%);
+}
+/* line 539, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project:hover > .project-wr > .item-top {
+  color: red;
+}
+/* line 548, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  transition: transform 2s;
+}
+/* line 558, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr > .item-top, .abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr .item-bottom {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  text-shadow: 0px 0px 33px white;
+  color: #191085;
+}
+/* line 571, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr > .item-top {
+  background: linear-gradient(to top, #ff265d, #21ce2f);
+}
+/* line 574, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr > .ib1 {
+  background: url(../img/red.jpg) no-repeat top/cover;
+}
+/* line 577, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr > .ib2 {
+  background: url(../img/blue.jpg) no-repeat top/cover;
+}
+/* line 580, ../sass/style.scss */
+.abilities_projects > .projects > .wr > .projects-cont > .project > .project-wr > .ib3 {
+  background: url(../img/black.jpg) no-repeat top/cover;
+}
+
+/* line 590, ../sass/style.scss */
+.expiriense {
+  background: linear-gradient(to bottom, #010000, #07002a);
+  padding: 150px 0;
+}
+@media (max-width: 768px) {
+  /* line 590, ../sass/style.scss */
+  .expiriense {
+    padding: 50px 0;
+  }
+}
+/* line 600, ../sass/style.scss */
+.expiriense > .wr {
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+@media (max-width: 768px) {
+  /* line 600, ../sass/style.scss */
+  .expiriense > .wr {
+    display: block;
+  }
+}
+/* line 616, ../sass/style.scss */
+.expiriense > .wr > .exp {
+  font-size: 30px;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  /* line 616, ../sass/style.scss */
+  .expiriense > .wr > .exp {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* line 625, ../sass/style.scss */
+.expiriense > .wr > .exp > .title {
+  font-size: 45px;
+}
+@media (max-width: 768px) {
+  /* line 625, ../sass/style.scss */
+  .expiriense > .wr > .exp > .title {
+    font-size: 30px;
+  }
+}
+/* line 632, ../sass/style.scss */
+.expiriense > .wr > .exp > .info {
+  font-size: 25px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  /* line 632, ../sass/style.scss */
+  .expiriense > .wr > .exp > .info {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+/* line 641, ../sass/style.scss */
+.expiriense > .wr > .exp > .spec {
+  font-size: 25px;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  /* line 641, ../sass/style.scss */
+  .expiriense > .wr > .exp > .spec {
+    font-size: 15px;
+  }
+}
+/* line 649, ../sass/style.scss */
+.expiriense > .wr > .exp > p {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+@media (max-width: 768px) {
+  /* line 649, ../sass/style.scss */
+  .expiriense > .wr > .exp > p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+/* line 663, ../sass/style.scss */
+.expiriense > .wr .Edukation {
+  font-size: 30px;
+  width: 30%;
+}
+@media (max-width: 768px) {
+  /* line 663, ../sass/style.scss */
+  .expiriense > .wr .Edukation {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+/* line 674, ../sass/style.scss */
+.expiriense > .wr .Edukation > .Lviv, .expiriense > .wr .Edukation .KNEU {
+  font-size: 25px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  /* line 674, ../sass/style.scss */
+  .expiriense > .wr .Edukation > .Lviv, .expiriense > .wr .Edukation .KNEU {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+/* line 682, ../sass/style.scss */
+.expiriense > .wr .Edukation > .Lviv > .info, .expiriense > .wr .Edukation .KNEU > .info {
+  font-size: 17px;
+  margin-top: 15px;
+}
+@media (max-width: 768px) {
+  /* line 682, ../sass/style.scss */
+  .expiriense > .wr .Edukation > .Lviv > .info, .expiriense > .wr .Edukation .KNEU > .info {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+/* line 691, ../sass/style.scss */
+.expiriense > .wr .Edukation > .Lviv > .spec, .expiriense > .wr .Edukation .KNEU > .spec {
+  font-size: 20px;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  /* line 691, ../sass/style.scss */
+  .expiriense > .wr .Edukation > .Lviv > .spec, .expiriense > .wr .Edukation .KNEU > .spec {
+    font-size: 15px;
+  }
+}
+
+/* line 705, ../sass/style.scss */
+.contact {
+  padding: 100px 0;
+  background: url(../img/contact_bg.jpg) no-repeat center/cover;
+}
+@media (max-width: 768px) {
+  /* line 705, ../sass/style.scss */
+  .contact {
+    padding: 100px 0 50px;
+  }
+}
+/* line 712, ../sass/style.scss */
+.contact:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 40%;
+  top: 0;
+  background: linear-gradient(to bottom, #07002a, transparent);
+  z-index: 0;
+}
+/* line 722, ../sass/style.scss */
+.contact > .wr {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+@media (max-width: 768px) {
+  /* line 722, ../sass/style.scss */
+  .contact > .wr {
+    display: block;
+  }
+}
+/* line 734, ../sass/style.scss */
+.contact > .wr > .row1 > .title {
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 40px white;
+}
+@media (max-width: 768px) {
+  /* line 741, ../sass/style.scss */
+  .contact > .wr > .row1 > .social {
+    text-align: center;
+  }
+}
+/* line 745, ../sass/style.scss */
+.contact > .wr > .row1 > .social > .link {
+  font-size: 50px;
+  text-decoration: none;
+  margin: 20px 7px;
+  color: #ff265d;
+  text-shadow: 0 0 5px white;
+  transition: all 1s ease;
+}
+@media (max-width: 768px) {
+  /* line 745, ../sass/style.scss */
+  .contact > .wr > .row1 > .social > .link {
+    font-size: 30px;
+  }
+}
+/* line 757, ../sass/style.scss */
+.contact > .wr > .row1 > .social > .link:hover {
+  color: blue;
+  text-shadow: 0 0 30px #ff265d;
+  transform: scale(1.1);
+}
+/* line 765, ../sass/style.scss */
+.contact > .wr > .row2 {
+  display: flex;
+  align-items: center;
+  text-shadow: 0 0 10px red;
+  border-radius: 100%;
+  background: rgba(28, 5, 11, 0.5);
+}
+@media (max-width: 768px) {
+  /* line 765, ../sass/style.scss */
+  .contact > .wr > .row2 {
+    display: block;
+    background: none;
+  }
+}
+/* line 779, ../sass/style.scss */
+.contact > .wr > .row2 > .write {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  /* line 779, ../sass/style.scss */
+  .contact > .wr > .row2 > .write {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+/* line 793, ../sass/style.scss */
+.contact > .wr > .row2 > .write p {
+  margin: 15px 25px;
+  transition: all 0.5s ease;
+}
+@media (max-width: 768px) {
+  /* line 793, ../sass/style.scss */
+  .contact > .wr > .row2 > .write p {
+    margin: 10px 0;
+  }
+}
+/* line 800, ../sass/style.scss */
+.contact > .wr > .row2 > .write p:hover {
+  transform: scale(1.2);
+  color: white;
+  text-shadow: 0px 0px 35px red;
+}
+/* line 813, ../sass/style.scss */
+.contact > .allrights {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  margin-top: 50px;
+  font-family: 'Righteous', cursive;
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  /* line 813, ../sass/style.scss */
+  .contact > .allrights {
+    font-size: 20px;
+    opacity: 1;
+    text-shadow: 1px 1px 2px black;
+  }
+}
+
+/* line 830, ../sass/style.scss */
+.link-to-project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+}
